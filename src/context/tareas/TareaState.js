@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import { types } from '../../types/types';
 import { tareaContext } from './tareaContext';
-import tareaReducer from './tareaReducer';
+import {tareaReducer} from './tareaReducer';
 
 
 export const TareaState = props => {

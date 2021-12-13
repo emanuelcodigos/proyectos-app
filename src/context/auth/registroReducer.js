@@ -1,6 +1,6 @@
 import { types } from "../../types/types";
 
-export default (state, action) => {
+export const registroReducer =  (state, action) => {
 
     switch (action.type) {
 

@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import { types } from "../../types/types";
-import registroReducer from '../auth/registroReducer';
+import {registroReducer} from '../auth/registroReducer';
 import { registroContext } from '../auth/registroContext';
 
 export const RegistroState = props => {

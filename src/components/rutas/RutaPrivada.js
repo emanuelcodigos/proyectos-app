@@ -15,6 +15,8 @@ export const RutaPrivada = ({children}) => {
         if (token) {
             usuarioAutenticado(token);
         }
+
+        // eslint-disable-next-line
     }, [token]);
 
     return autenticado ? children : <Navigate to="/"/>

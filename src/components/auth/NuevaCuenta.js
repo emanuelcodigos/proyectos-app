@@ -14,7 +14,7 @@ export const NuevaCuenta = (props) => {
 
     const [formValues, handleInputChange] = useForm(
         {
-            email: 'ema@gmail.com', password: '123456789',
+            email: '', password: '',
             password2: '', nombre: ''
         }
     );
@@ -48,7 +48,7 @@ export const NuevaCuenta = (props) => {
             Swal.fire(alerta.categoria.toUpperCase(), alerta.msg, alerta.categoria);
             resetearAlertAuth();
         }
-    }, [alerta]);
+    }, [alerta, resetearAlertAuth]);
 
     useEffect(() => {
         if(autenticado){

@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import { types } from '../../types/types';
 import { proyectoContext } from './proyectoContext';
-import proyectoReducer from './proyectoReducer';
+import {proyectoReducer} from './proyectoReducer';
 
 export const ProyectoState = props => {
 

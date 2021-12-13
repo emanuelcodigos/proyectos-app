@@ -14,7 +14,7 @@ export const Login = () => {
     const navigate = useNavigate();
     const context = useContext(registroContext);
     const { loading, alerta, autenticado, mostrarAlerta, selLoading, startLoginUsuario, resetearAlertAuth } = context;
-    const [formValues, handleInputChange] = useForm({ email: 'ema@gmail.com', password: '123456789' });
+    const [formValues, handleInputChange] = useForm({ email: '', password: '' });
     const { email, password } = formValues;
 
 
@@ -37,7 +37,7 @@ export const Login = () => {
             resetearAlertAuth();
         }
 
-    }, [alerta]);
+    }, [alerta, resetearAlertAuth]);
 
     useEffect( () => {
 

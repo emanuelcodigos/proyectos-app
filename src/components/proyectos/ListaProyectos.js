@@ -11,7 +11,7 @@ export const ListaProyectos = () => {
 
     useEffect(() => {
         setArrayProyectos();
-    }, []);
+    }, [setArrayProyectos]);
 
     if(arrayProyectos.length === 0) return <p>No hay proyectos, comienza creando uno</p>;
 

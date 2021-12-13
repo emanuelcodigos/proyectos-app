@@ -24,7 +24,7 @@ export const FormularioTarea = () => {
             setValues({ nombre: '' });
         }
 
-    }, [tareaSeleccinada]);
+    }, [tareaSeleccinada, setValues]);
 
     
     if (!proyectoActivo) return null;

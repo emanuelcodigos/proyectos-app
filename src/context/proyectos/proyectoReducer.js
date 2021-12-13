@@ -1,7 +1,7 @@
 import { types } from "../../types/types";
 
 
-export default (state, action) => {
+export const proyectoReducer =  (state, action) => {
 
     switch(action.type){
         
