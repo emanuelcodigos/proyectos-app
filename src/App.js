@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import { Login } from './components/auth/Login';
+import { NuevaCuenta } from './components/auth/NuevaCuenta';
+import { RutaPrivada } from './components/rutas/RutaPrivada';
+import { RegistroState } from './context/auth/RegistroState';
+import { ProyectoState } from './context/proyectos/ProyectoState';
+import { TareaState } from './context/tareas/TareaState';
+import { DashboardRutas } from './components/rutas/DashboardRutas';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <ProyectoState>
+            <TareaState>
+                <RegistroState>
+                    <Router>
+                        <Routes>
+                            <Route path="/" element={<Login />} />
+                            <Route path="registro" element={<NuevaCuenta />} />
+
+                            <Route path="/*" element={
+                                <RutaPrivada>
+                                    <DashboardRutas/>
+                                </RutaPrivada>
+                            }/>
+                        </Routes>
+
+                    </Router>
+                </RegistroState>
+            </TareaState>
+        </ProyectoState>
+    );
+
 }
 
 export default App;
